@@ -1,0 +1,27 @@
+﻿@using OdeToFood.Core
+@model Restaurant
+
+<div class="fa fa-cpanel">
+    <div class="fa-cpanel">
+        <h3>@Model.Name</h3>
+    </div>
+    <div class="fa-cpanel">
+        <span>Location: @Model.Address</span>
+        <span>Cuisine: @Model.Cuisine</span>
+    </div>
+    <div class="fa-cpanel">        
+            <a asp-page="./Detail"
+               asp-route-restaurantId="@Model.Id">
+                <i class="btn btn-info"> Details</i>
+            </a>        
+            <a asp-page="./Edit"
+               asp-route-restaurantId="@Model.Id">
+                <i class="btn btn-outline-primary"> Edit</i>
+            </a>       
+            <a asp-page="./Delete"
+               asp-route-restaurantId="@Model.Id">
+                <i class="btn btn-danger"> Delete</i>
+            </a>
+        <hr />
+    </div>
+</div>

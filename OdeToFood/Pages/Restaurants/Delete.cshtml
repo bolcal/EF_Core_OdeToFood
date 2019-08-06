@@ -1,0 +1,21 @@
+﻿@page "{restaurantId}"
+@model OdeToFood.Pages.Restaurants.DeleteModel
+@{
+    
+    //Layout = null; //if we set to null ,default layout will be erased. defauld layout is in the _viewStart.cshtml
+
+}
+
+
+    <h2>Delete</h2>
+    <div class="alert alert-danger">
+        Are you sure wan to delete @Model.Restaurant.Name?
+    </div>
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Yes!</button>
+        <a asp-page="List" class="btn btn-dark">Cancel</a>
+    </form>
+
+
+
+
